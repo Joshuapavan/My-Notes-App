@@ -26,4 +26,5 @@
     <color name="colorSearchBackground">#333333</color>
     <color name="black">#29292929</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="main">#FFD3D3</color>
 </resources>

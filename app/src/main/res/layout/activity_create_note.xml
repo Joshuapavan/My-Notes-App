@@ -23,30 +23,30 @@
 
             <ImageView
                 android:id="@+id/imageBack"
-                android:layout_width="@dimen/_30sdp"
-                android:layout_height="@dimen/_30sdp"
-                android:layout_marginStart="@dimen/_6sdp"
-                android:layout_marginTop="@dimen/_20sdp"
-                android:layout_marginEnd="@dimen/_12sdp"
+                android:layout_width="@dimen/_16sdp"
+                android:layout_height="@dimen/_16sdp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
                 android:contentDescription="@string/app_name"
                 android:src="@drawable/ic_back"
-                app:tint="@color/colorIcons"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/colorIcons" />
 
             <ImageView
                 android:id="@+id/imageSave"
                 android:layout_width="@dimen/_20sdp"
                 android:layout_height="@dimen/_20sdp"
-                android:layout_marginEnd="@dimen/_12sdp"
+                android:layout_marginEnd="28dp"
                 android:background="@drawable/background_done_button"
                 android:contentDescription="@string/app_name"
                 android:padding="@dimen/_4sdp"
                 android:src="@drawable/ic_done"
-                app:tint = "@color/colorIcons"
                 app:layout_constraintBottom_toBottomOf="@id/imageBack"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/imageBack"/>
+                app:layout_constraintTop_toTopOf="@+id/imageBack"
+                app:layout_constraintVertical_bias="0.0"
+                app:tint="@color/colorIcons" />
 
             <EditText
                 android:id="@+id/inputNoteTitle"

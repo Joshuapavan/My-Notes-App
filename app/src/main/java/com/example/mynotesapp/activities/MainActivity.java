@@ -46,7 +46,6 @@ public class MainActivity extends AppCompatActivity {
         addNote = findViewById(R.id.imageAddNote);
         addImage = findViewById(R.id.imageAddImage);
         addLink = findViewById(R.id.imageAddLink);
-
         notesRecyclerView = findViewById(R.id.notesRecyclerView);
     }
 
@@ -85,7 +84,6 @@ public class MainActivity extends AppCompatActivity {
 
     void recyclerView(){
         notesRecyclerView.setLayoutManager(new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL));
-
         noteList = new ArrayList<>();
         notesAdapter = new NotesAdapter(noteList);
         notesRecyclerView.setAdapter(notesAdapter);

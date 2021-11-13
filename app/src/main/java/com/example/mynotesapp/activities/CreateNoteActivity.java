@@ -68,7 +68,7 @@ public class CreateNoteActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (inputNoteTitle.getText().toString().trim().isEmpty()) {
                     Snackbar.make(newNoteLayout, "Title Cannot be Empty", Snackbar.LENGTH_SHORT).show();
-                } else if (inputNoteSubtitle.getText().toString().trim().isEmpty() && inputNoteText.getText().toString().trim().isEmpty()) {
+                } else if (inputNoteSubtitle.getText().toString().trim().isEmpty() || inputNoteText.getText().toString().trim().isEmpty()) {
                     Snackbar.make(newNoteLayout, "Contents Cannot be Empty", Snackbar.LENGTH_SHORT).show();
                 } else {
 
