@@ -15,7 +15,7 @@ import java.util.List;
 
 public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NoteViewHolder>{
 
-    private List<Note> notes;
+    private final List<Note> notes;
 
     public NotesAdapter(List<Note> notes) {
         this.notes = notes;
@@ -54,7 +54,7 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NoteViewHold
         }
 
         void setNote(Note note){
-            textTitle.setText(note.getNoteText());
+            textTitle.setText(note.getTitle());
             if(note.getSubtitle().trim().isEmpty()){
                 textSubtitle.setVisibility(View.GONE);
             }else{

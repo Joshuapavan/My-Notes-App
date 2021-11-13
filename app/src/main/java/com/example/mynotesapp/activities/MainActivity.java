@@ -1,5 +1,6 @@
 package com.example.mynotesapp.activities;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
@@ -19,6 +20,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
+
+    public static final int REQUEST_CODE_ADD_NOTE = 1;
 
     ImageView newNote,addNote,addImage,addLink;
 
@@ -49,8 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
     void newNoteClick(ImageView newNote){
         newNote.setOnClickListener(v -> {
-            Intent newNoteIntent = new Intent(getApplicationContext(), CreateNoteActivity.class);
-            startActivity(newNoteIntent);
+            startActivityForResult(new Intent(getApplicationContext(), CreateNoteActivity.class),REQUEST_CODE_ADD_NOTE);
         });
     }
 
@@ -89,5 +91,13 @@ public class MainActivity extends AppCompatActivity {
         notesRecyclerView.setAdapter(notesAdapter);
 
         getNotes();
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == REQUEST_CODE_ADD_NOTE && resultCode == RESULT_OK){
+            getNotes();
+        }
     }
 }
