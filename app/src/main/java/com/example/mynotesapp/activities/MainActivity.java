@@ -1,4 +1,4 @@
-package com.example.mynotesapp;
+package com.example.mynotesapp.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,9 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
 
+import com.example.mynotesapp.R;
+
 public class MainActivity extends AppCompatActivity {
 
     ImageView newNote,addNote,addImage,addLink;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
     void newNoteClick(ImageView newNote){
         newNote.setOnClickListener(v -> {
-            Intent newNoteIntent = new Intent(getApplicationContext(),CreateNoteActivity.class);
+            Intent newNoteIntent = new Intent(getApplicationContext(), CreateNoteActivity.class);
             startActivity(newNoteIntent);
         });
     }

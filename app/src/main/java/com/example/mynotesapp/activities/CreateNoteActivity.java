@@ -1,4 +1,4 @@
-package com.example.mynotesapp;
+package com.example.mynotesapp.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import com.example.mynotesapp.R;
 
 public class CreateNoteActivity extends AppCompatActivity {
 
@@ -25,7 +27,7 @@ public class CreateNoteActivity extends AppCompatActivity {
     }
     void backClick(ImageView backButton){
         backButton.setOnClickListener(v->{
-            Intent backIntent = new Intent(getApplicationContext(),MainActivity.class);
+            Intent backIntent = new Intent(getApplicationContext(), MainActivity.class);
             startActivity(backIntent);
         });
     }
