@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutTools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_tools"
+    app:behavior_peekHeight = "@dimen/_400sdp"
+    app:layout_behavior="@string/bottom_sheet_behavior">
+
+    <TextView
+        android:id="@+id/textTools"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:fontFamily="@font/ubuntu_medium"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text="@string/tools"
+        android:textSize="@dimen/_50ssp"
+        android:textColor="@color/colorWhite"
+        />
+
+</LinearLayout>

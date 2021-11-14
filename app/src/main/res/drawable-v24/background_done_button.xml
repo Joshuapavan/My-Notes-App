@@ -4,5 +4,5 @@
 
     <stroke
         android:width="@dimen/_2sdp"
-        android:color="@color/colorIcons"/>
+        android:color="@color/main"/>
 </shape>

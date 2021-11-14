@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/newNoteLayout"
@@ -31,7 +32,7 @@
                 android:src="@drawable/ic_back"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/colorIcons" />
+                app:tint="@color/main" />
 
             <ImageView
                 android:id="@+id/imageSave"
@@ -46,7 +47,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/imageBack"
                 app:layout_constraintVertical_bias="0.0"
-                app:tint="@color/colorIcons" />
+                app:tint="@color/main" />
 
             <EditText
                 android:id="@+id/inputNoteTitle"
@@ -95,24 +96,12 @@
                 android:importantForAutofill="no"
                 android:includeFontPadding="false"
                 android:inputType="textMultiLine"
-                android:paddingStart="@dimen/_12sdp"
                 android:paddingTop="@dimen/_8sdp"
                 android:paddingBottom="@dimen/_8sdp"
                 android:textSize="@dimen/_13ssp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/viewSubtitleIndicator"
                 app:layout_constraintTop_toBottomOf="@+id/textDateTime"
-                />
-            <View
-                android:id="@+id/viewSubtitleIndicator"
-                android:layout_width="@dimen/_5sdp"
-                android:layout_height="0dp"
-                android:layout_marginStart="@dimen/_12sdp"
-                android:background="@drawable/background_subtitle_indicator"
-                app:layout_constraintBottom_toBottomOf="@+id/inputNoteSubtitle"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@id/inputNoteSubtitle"
                 />
 
             <EditText
@@ -140,5 +129,6 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
+    <include layout="@layout/tools"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

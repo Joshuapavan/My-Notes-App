@@ -10,11 +10,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.mynotesapp.R;
 import com.example.mynotesapp.database.NotesDatabase;
 import com.example.mynotesapp.entities.Note;
+import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.snackbar.Snackbar;
 
 import java.text.SimpleDateFormat;
@@ -44,6 +46,8 @@ public class CreateNoteActivity extends AppCompatActivity {
         textDateTime.setText(
                 new SimpleDateFormat("EEEE, dd  MMMM yyyy HH:mm a", Locale.getDefault()).format(new Date())
         );
+
+        initialiseToolsMenu();
     }
 
     void initialise(){
@@ -96,6 +100,17 @@ public class CreateNoteActivity extends AppCompatActivity {
                     }
                     new SaveNoteTask().execute();
                 }
+            }
+        });
+    }
+    private void initialiseToolsMenu(){
+        final LinearLayout layoutTools = findViewById(R.id.layoutTools);
+        final BottomSheetBehavior<LinearLayout> bottomSheetBehavior = BottomSheetBehavior.from(layoutTools);
+        layoutTools.findViewById(R.id.layoutTools).setOnClickListener(v ->{
+            if(bottomSheetBehavior.getState() != BottomSheetBehavior.STATE_EXPANDED){
+                bottomSheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
+            }else{
+                bottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
             }
         });
     }

@@ -17,7 +17,7 @@
         android:fontFamily="@font/ubuntu_bold"
         android:includeFontPadding="false"
         android:text="@string/my_notes"
-        android:textColor="@color/colorWhite"
+        android:textColor="@color/main"
         android:textSize="@dimen/_20ssp"
         app:layout_constraintTop_toTopOf="parent"/>
 
