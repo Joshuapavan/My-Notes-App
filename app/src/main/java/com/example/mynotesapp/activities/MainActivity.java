@@ -40,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
     void initialise(){
         newNote = findViewById(R.id.imageAddNoteMain);
         addNote = findViewById(R.id.imageAddNote);

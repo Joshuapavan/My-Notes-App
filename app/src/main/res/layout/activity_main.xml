@@ -39,7 +39,7 @@
             android:layout_height="@dimen/_20sdp"
             android:contentDescription="@string/app_name"
             android:src="@drawable/ic_search"
-            app:tint="@color/colorSearchIcon" />
+            app:tint="@color/main" />
 
         <EditText
             android:id="@+id/inputSearch"
@@ -88,7 +88,7 @@
             android:layout_height="@dimen/_23sdp"
             android:contentDescription="@string/app_name"
             android:src="@drawable/ic_add_outline"
-            app:tint="@color/colorIcons" />
+            app:tint="@color/main" />
 
         <ImageView
             android:id="@+id/imageAddImage"
@@ -97,7 +97,7 @@
             android:layout_marginStart="@dimen/_15sdp"
             android:contentDescription="@string/app_name"
             android:src="@drawable/ic_image"
-            app:tint="@color/colorIcons" />
+            app:tint="@color/main" />
 
         <ImageView
             android:id="@+id/imageAddLink"
@@ -106,7 +106,7 @@
             android:layout_marginStart="@dimen/_15sdp"
             android:contentDescription="@string/app_name"
             android:src="@drawable/ic_web_link"
-            app:tint="@color/colorIcons" />
+            app:tint="@color/main" />
 
     </LinearLayout>
 
